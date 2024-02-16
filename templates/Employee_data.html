@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee_data</title>
+</head>
+<body>
+    <center>
+        <h1>Complete Data of Business of Employee on september Quarter - 2023</h1>
+        <table border="3px">
+            <tr>
+                <th>Serial no</th>
+                <th>Series_reference</th>
+                <th>Period</th>
+                <th>Data_value</th>
+                <th>Suppressed</th>
+                <th>Status</th>
+                <th>Units</th>
+                <th>Magnitude</th>
+                <th>Subject</th>
+                <th>Group</th>
+                <th>Series_title_1</th>
+                <th>Series_title_2</th>
+                <th>Series_title_3</th>
+                <th>Series_title_4</th>
+                <th>Series_title_5</th>
+            </tr>
+        {% for i in EBDO %}
+            <tr>
+                <td>{{i.pk}}</td>
+                <td>{{i.Series_reference}}</td>
+                <td>{{i.Period}}</td>
+                <td>{{i.Data_value}}</td>
+                <td>{{i.Suppressed}}</td>
+                <td>{{i.Status}}</td>
+                <td>{{i.Units}}</td>
+                <td>{{i.Magnitude}}</td>
+                <td>{{i.Subject}}</td>
+                <td>{{i.Group}}</td>
+                <td>{{i.Series_title_1}}</td>
+                <td>{{i.Series_title_2}}</td>
+                <td>{{i.Series_title_3}}</td>
+                <td>{{i.Series_title_4}}</td>
+                <td>{{i.Series_title_5}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
